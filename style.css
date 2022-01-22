@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 10vh;
+  position: relative;
+}
+
+.logo_container {
+  background-color: aquamarine;
+  color: rgb(109, 90, 65);
+  font-weight: 800;
+  padding: .5rem;
+}
+
+/* hamburger icon */
+.hamburger_icon {
+  cursor: pointer;
+}
+.hamburger_icon_component {
+  width: 2rem;
+  height: .25rem;
+  margin: .25rem;
+  border-radius: .5rem;
+  background-color: #000;
+} 
+
+/* navigation menu */
+.navigation_menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background-color: rgb(24, 24, 24);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  font-weight: 600;
+  /* hide menu by default, 
+    after opening height is 90vh */
+  height: 0;
+  overflow: hidden;
+}
+.navigation_menu .nav_link {
+  display: inline-block;
+  margin: .275rem;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+/* links hover styles */
+.navigation_menu .nav_link::before {
+  content: attr(data-link-name);
+  -webkit-text-stroke-width: 0;
+  -webkit-text-fill-color: aqua;
+  position: absolute;
+  text-align: center;
+  /* hide it by default 
+    is visible only on hover */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease-in-out;
+}
+.navigation_menu .nav_link:hover::before {
+  max-height: 10rem;
+  transition: max-height 400ms ease-in-out;
+}
+
+
+

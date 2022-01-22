@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test GSAP</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <div class="logo_container">
+      MY LOGO
+    </div>
+    <div class="hamburger_icon">
+      <div class="hamburger_icon_component line1"></div>
+      <div class="hamburger_icon_component line2"></div>
+      <div class="hamburger_icon_component line3"></div>
+    </div>
+    <div class="navigation_menu">
+      <ul>
+        <!-- i need data-link-name for the hover animation -->
+        <li><a class="nav_link" data-link-name="Home" href="#">Home</a></li>
+        <li><a class="nav_link" data-link-name="About" href="#">About</a></li>
+        <li><a class="nav_link" data-link-name="Contacts" href="#">Contacts</a></li>
+        <li><a class="nav_link" data-link-name="Work" href="#">Work</a></li>
+      </ul>
+    </div>
+  </header>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
